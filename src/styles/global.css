@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Oxygen", sans-serif;
+  font-size: 1rem;
+
+  /* Color styles */
+  --main-pink: #D658B3;
+  --main-green: #45B442;
+  --base-white: #FFFFFF;
+  --base-gray-100: #F4F1F2;
+  --base-gray-200: #E9E7E9;
+  --base-gray-300: #DFDCDF;
+  --base-gray-400: #CECACD;
+  --base-gray-500: #756C71;
+  --base-gray-600: #4A4448;
+  --base-gray-700: #332B31;
+
+  /* Text-size styles */
+  --heading-title--md: 1.5rem;
+  --heading-title--sm: 1.12rem;
+  --heading-subtitle--md: 0.88rem;
+  --heading-subtitle--sm: 0.75rem;
+  --body-text--md: 1rem;
+  --body-text--sm: 0.88rem;
+  --body-text--xs: 0.75rem;
+}
