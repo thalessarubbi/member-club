@@ -1,0 +1,72 @@
+#fidelity-card {
+  display: flex;
+  flex-direction: column;
+
+  &>div.card-header {
+    display: flex;
+    justify-content: space-between;
+
+    &>div {
+      flex: 0.8;
+
+      &>h2 {
+        font: 700 var(--heading-subtitle--sm)/1.4 'Oxygen', sans-serif;
+        color: var(--base-gray-500);
+      }
+
+      &>p {
+        font: 400 var(--body-text--xs)/1.4 'Oxygen', sans-serif;
+        color: var(--base-gray-500);
+
+
+        margin-top: 0.25rem;
+      }
+    }
+
+    &>span {
+      min-width: fit-content;
+      height: fit-content;
+
+      background-color: var(--base-gray-300);
+
+      border-radius: 62.4375rem;
+      padding: 0.21875rem 0.5rem;
+
+      font: 700 var(--heading-subtitle--sm)/1.4 'Oxygen', sans-serif;
+      color: var(--base-gray-500);
+    }
+
+  }
+
+  &>div.slots {
+    max-width: 100vw;
+
+    display: grid;
+    grid-template-areas:
+      "A B C D E"
+      "F G H I J";
+
+    gap: 0.5rem;
+
+    &>span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      width: auto;
+      background-color: var(--base-gray-200);
+      border-radius: 0.785625rem;
+
+      &>img {
+        width: calc(100% - 0.5rem);
+        height: calc(100% - 0.5rem);
+      }
+
+      &>i {
+        color: var(--base-gray-500);
+        opacity: 0.35;
+        font-size: calc(100% + 0.4rem)
+      }
+    }
+  }
+}
