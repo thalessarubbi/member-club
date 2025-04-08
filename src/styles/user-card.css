@@ -1,4 +1,5 @@
 #user-card {
+  max-height: 5.625rem;
 
   &>picture {
     width: 3.5rem;

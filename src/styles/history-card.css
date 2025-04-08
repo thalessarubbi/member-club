@@ -2,7 +2,7 @@
   flex-direction: column;
 
   &>header {
-    margin-bottom: 0;
+    margin: 0;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -19,48 +19,56 @@
     }
   }
 
-  &>div.divider {
-    width: 100%;
-    height: 1px;
-    background-color: var(--base-gray-200);
-    margin: 0rem 0;
+  &>ul {
+    &>div.divider {
+      width: 100%;
+      height: 1px;
+      background-color: var(--base-gray-200);
+      margin: 0rem 0;
+    }
+
+    &>li {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.75rem;
+
+      &>div.cut-info {
+        &>h3 {
+          font: 700 var(--heading-subtitle--sm)/1.4 'Oxygen', sans-serif;
+          color: var(--base-gray-600);
+        }
+
+        &>p {
+          font: 400 var(--body-text--xs)/1.4 'Oxygen', sans-serif;
+          color: var(--base-gray-500);
+
+          margin-top: 0.125rem;
+        }
+      }
+
+      &>div.cut-seal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 2rem;
+        height: 2rem;
+
+        background-color: var(--main-green-fade);
+        border-radius: 624.9375rem;
+
+        &>i {
+          color: var(--main-green);
+        }
+      }
+    }
   }
 
-  &>ul>li {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 0.75rem;
 
-    &>div.cut-info {
-      &>h3 {
-        font: 700 var(--heading-subtitle--sm)/1.4 'Oxygen', sans-serif;
-        color: var(--base-gray-600);
-      }
-
-      &>p {
-        font: 400 var(--body-text--xs)/1.4 'Oxygen', sans-serif;
-        color: var(--base-gray-500);
-
-        margin-top: 0.125rem;
-      }
-    }
-
-    &>div.cut-seal {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      width: 2rem;
-      height: 2rem;
-
-      background-color: var(--main-green-fade);
-      border-radius: 624.9375rem;
-
-      &>i {
-        color: var(--main-green);
-      }
-    }
+  @media (width >=768px) {
+    max-height: 22.5rem;
+    overflow-y: auto;
   }
 }

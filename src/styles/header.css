@@ -1,5 +1,5 @@
 header {
-  max-width: 80rem;
+  max-width: 25rem;
   width: 100%;
   margin-inline: auto;
   margin-top: 2rem;
@@ -73,5 +73,10 @@ header {
     &.filled>button {
       opacity: 1;
     }
+  }
+
+  @media (width >=768px) {
+    margin-top: 4rem;
+
   }
 }

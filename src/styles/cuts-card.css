@@ -1,4 +1,5 @@
 #cuts-card {
+  max-height: 7.3125rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
