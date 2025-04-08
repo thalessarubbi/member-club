@@ -2,6 +2,7 @@ header {
   max-width: 80rem;
   width: 100%;
   margin-inline: auto;
+  margin-top: 2rem;
 
   display: flex;
   flex-direction: column;
