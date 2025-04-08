@@ -4,6 +4,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  margin-bottom: 1.25rem;
 
   &>img {
     width: 6.21rem;
@@ -12,5 +13,60 @@ header {
 
   &>div {
     width: 100%;
+  }
+
+  #search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: solid 1px var(--base-gray-400);
+    background-color: var(--base-gray-300);
+
+    border-radius: 0.75rem;
+    padding: 0.5rem;
+
+    &:focus-within {
+      border: solid 1.5px var(--main-pink);
+    }
+
+    &>input {
+      outline: none;
+      width: 100%;
+      height: max-content;
+
+      background: transparent;
+      color: var(--base-gray-700);
+      font: var(--body-text--md)/1.4rem;
+
+      &::placeholder {
+        color: var(--base-gray-500);
+      }
+
+      &:focus {
+        color: var(--main-pink);
+      }
+    }
+
+    &>button {
+      background-color: var(--base-gray-700);
+      color: var(--base-white);
+      opacity: 0.6;
+      border-radius: 0.5rem;
+      width: 40px;
+      height: 40px;
+
+      &>i {
+        font-size: 1.25rem;
+      }
+    }
+
+    &.filled>input {
+      color: var(--base-gray-700);
+    }
+
+    &.filled>button {
+      opacity: 1;
+    }
   }
 }
