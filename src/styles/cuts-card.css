@@ -8,7 +8,7 @@
     flex: 1;
 
     &>span {
-      font: 400 var(--body-text--sm)/1.4rem, 'Oxygen', sans-serif;
+      font: 400 var(--body-text--sm)/1.4, 'Oxygen', sans-serif;
     }
 
     &>div {
@@ -28,19 +28,16 @@
       &>p {
         min-width: fit-content;
         width: fit-content;
-        font: 400 var(--body-text--xs)/1.4rem, 'Oxygen', sans-serif;
+        font: 400 var(--body-text--xs)/1.4, 'Oxygen', sans-serif;
       }
     }
   }
 
-  &>i {
+  &>img {
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 48.5625rem;
     background-color: var(--base-gray-200);
-    text-align: center;
-    align-content: center;
-    color: var(--main-pink);
-    font-size: 1.5rem;
+    object-fit: contain;
   }
 }
