@@ -1,2 +1,2 @@
 
-import './modules/page-load.js'
+import './modules/form/submit.js'

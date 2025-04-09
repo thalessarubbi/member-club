@@ -1,3 +1,4 @@
+const body = document.querySelector('body');
 const gridContainer = document.querySelector('main');
 // User info
 const userName = document.getElementById('user-name');
@@ -13,11 +14,28 @@ const cutsBalance = document.getElementById('cuts-balance');
 const cutsRemaining = document.getElementById('cuts-remaining');
 
 export function showClient({ client }) {
+  // Clean HTML
+  appointmentsHistory.innerHTML = '';
+  cutsSeals.innerHTML = '';
+
+  const errorMessage = document.createElement('p');
+
   if (!client) {
-    gridContainer.innerHTML
-      = '<p class="card" style="width: 50vw; position: absolute; left: auto; display: block">No clients found</p>';
+    gridContainer.style.display = 'none';
+    errorMessage.setAttribute('class', 'card');
+    errorMessage.setAttribute('style', 'margin: 10rem auto; text-align: center; display: block; width: fit-content');
+    errorMessage.setAttribute('id', 'error-message');
+    errorMessage.textContent = 'Nenhum cliente encontrado';
+
+    body.append(errorMessage);
+
     return;
   }
+
+  gridContainer.style.display = 'grid';
+  const errorMessageElement = document.getElementById('error-message');
+  // Remove error message if exists
+  if (errorMessageElement) errorMessageElement.remove();
 
   // Set user ifo
   userName.textContent = client.name;
