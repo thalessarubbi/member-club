@@ -49,11 +49,13 @@
     gap: 0.5rem;
 
     &>span {
+      min-height: 5.5rem;
+      min-width: 5.5rem;
+      height: auto;
+      width: auto;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: auto;
-      width: auto;
       background-color: var(--base-gray-200);
       border-radius: 0.785625rem;
 
