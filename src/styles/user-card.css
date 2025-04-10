@@ -1,4 +1,5 @@
 #user-card {
+  grid-area: A;
   max-height: 5.625rem;
 
   &>picture {

@@ -74,20 +74,39 @@ main {
   }
 }
 
-#user-card {
-  grid-area: A;
-}
+dialog {
+  position: absolute;
+  margin: auto;
+  padding: 2rem;
+  outline: none;
+  border: 1px solid var(--base-gray-300);
+  border-radius: 0.5rem;
 
-#history-card {
-  grid-area: B;
-}
+  &::backdrop {
+    background-color: #00000090;
+  }
 
-#fidelity-card {
-  grid-area: C;
-}
+  &>p {
+    font: 700 var(--heading-title--sm)/1.4 'Oxygen', sans-serif;
+  }
 
-#cuts-card {
-  grid-area: D;
+  &>button {
+    width: 100%;
+
+    margin-top: 4rem;
+    padding: 0.5rem 1rem;
+    outline: none;
+
+    background-color: var(--main-green);
+    border-radius: 0.5rem;
+
+    color: var(--base-white);
+    font: 500 var(--body-text--sm)/1.4 'Oxygen', sans-serif;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }
 
 .card {

@@ -1,4 +1,5 @@
 #fidelity-card {
+  grid-area: C;
   display: flex;
   flex-direction: column;
 

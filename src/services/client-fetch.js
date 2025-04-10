@@ -7,7 +7,7 @@ export async function fetchClient({ id }) {
 
     return data;
   } catch (error) {
-    alert('Não foi possível buscar o cliente');
+    alert('Por favor digite um ID válido');
     console.error(error);
   }
 }

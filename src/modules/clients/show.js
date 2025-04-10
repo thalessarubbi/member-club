@@ -12,6 +12,8 @@ const cutsSeals = document.querySelector('.slots');
 const cutsProgress = document.querySelector('.progress');
 const cutsBalance = document.getElementById('cuts-balance');
 const cutsRemaining = document.getElementById('cuts-remaining');
+// Gift modal
+const giftModal = document.querySelector('dialog');
 
 export function showClient({ client }) {
   // Clean HTML
@@ -76,13 +78,12 @@ export function showClient({ client }) {
   for (let i = 0; i < sealSlots; i++) {
     const span = document.createElement('span');
 
-    if (i === sealSlots - 1) {
+    if (i === sealSlots - 1 && client.loyaltyCard.totalCuts < i) {
       const giftIcon = document.createElement('i');
       giftIcon.setAttribute('class', 'ph-fill ph-gift');
 
       span.append(giftIcon);
       cutsSeals.append(span);
-      break;
     }
 
     if (client.loyaltyCard.totalCuts > i) {
@@ -102,4 +103,15 @@ export function showClient({ client }) {
   cutsProgress.style.width = `${cutsPercentage}%`;
   cutsBalance.textContent = `${client.loyaltyCard.totalCuts} de ${client.loyaltyCard.cutsNeeded}`;
   cutsRemaining.textContent = client.loyaltyCard.cutsRemaining;
+
+  if (client.loyaltyCard.cutsRemaining === 0) {
+    giftModal.showModal();
+
+    giftModal.onclick = (event) => {
+
+      if (event.target === giftModal.lastElementChild) {
+        giftModal.close();
+      }
+    }
+  }
 }

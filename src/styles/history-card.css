@@ -1,4 +1,5 @@
 #history-card {
+  grid-area: B;
   flex-direction: column;
 
   &>header {
